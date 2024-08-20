@@ -1,0 +1,58 @@
+body {
+  padding: 1em;
+  font-family: helvetica, sans-serif;
+  line-height: 1.3;
+}
+
+.dropzone {
+  box-sizing: border-box;
+  width: 100%;
+  height: 5em;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.dropzone.disabled {
+  cursor: not-allowed;
+}
+
+.dropzone.drag-over {
+  background-color: pink;
+}
+
+.image-container img {
+  margin-bottom: 10px;
+  max-width: 100%;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 10em;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.full-document-section {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.image-result-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-result-container img {
+  width: 45%;
+}
+
+.image-result-container textarea {
+  width: 45%;
+}
