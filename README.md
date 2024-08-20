@@ -2,7 +2,7 @@
 
 Este proyecto es una aplicación web simple que permite realizar OCR (Reconocimiento Óptico de Caracteres) directamente en tu navegador. Puedes subir imágenes o PDFs, y extraer el texto de ellos sin necesidad de enviar los archivos a un servidor.
 
-[Vista en vivo](https://freddyrm.github.io/OCRWebApp/).
+Vista [links](https://freddyrm.github.io/OCR/).
 
 ## Características
 
