@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR imágenes y PDFs en tu navegador</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.min.mjs"></script>
+  <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.3.136/pdf.worker.min.mjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="text-center">OCR de PDFs e imágenes directamente en tu navegador</h1>
+    <p class="text-center">Esta herramienta se ejecuta completamente en tu navegador. No se suben archivos a un
+      servidor.</p>
+    <p class="text-center">Utiliza <a href="https://tesseract.projectnaptha.com/">Tesseract.js</a> para OCR y <a
+        href="https://mozilla.github.io/pdf.js/">PDF.js</a> para convertir PDFs en imágenes.</p>
+    <div class="form-group text-center">
+      <label for="id_language">Idioma:</label>
+      <select id="id_language" class="form-control d-inline-block w-auto">
+                <option>ESP</option>
+            </select>
+    </div>
+    <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png,.gif" style="display: none;" />
+    <div class="dropzone" id="dropzone">
+      Arrastra y suelta un archivo aquí o haz clic para seleccionar
+    </div>
+    <div class="form-group text-center">
+      <label for="ocr_options">Opciones de OCR:</label>
+      <div class="form-check-inline">
+        <input class="form-check-input" type="checkbox" id="useProjections" value="true">
+        <label class="form-check-label" for="useProjections">proyecciones horizontales/verticales</label>
+      </div>
+    </div>
+    <div class="image-container"></div>
+    <p class="text-center"><a href="https://github.com/simonw/tools/blob/main/ocr.html">Código fuente</a>. <a
+        href="https://simonwillison.net/2024/Mar/30/ocr-pdfs-images/">Cómo construí esto</a>.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
